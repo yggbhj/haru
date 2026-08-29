@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>アップローダー</title>
+</head>
+<body>
+    <h1>画像・動画アップロード</h1>
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="file" multiple accept="image/*,video/*">
+        <input type="submit" value="アップロード">
+    </form>
+    <h2>ギャラリー</h2>
+    <div>
+        {{ gallery | safe }}
+    </div>
+</body>
+</html>
